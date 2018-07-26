@@ -183,7 +183,7 @@ header .logo {
   }
   
   footer {
-	margin: 32px 0;
+	margin: 40px 0 20px;
 	text-align: center;
 	font-size: 14px;
   }
@@ -195,6 +195,7 @@ header .logo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    line-height: 1.3;
   }
 
   .services-header-img {
@@ -223,16 +224,58 @@ header .logo {
      border: 1px solid black;
    }
 
-   .service-facts {
-     display: flex;
-     flex-wrap: wrap;
-     margin: 20px;
-     width: 500px;
-   }
 
-   .service-facts ul {
-     margin: 20px;
-   }
-   
+   /* Mine */
+
+   /* This doesn't work but solution code does 
+   Thought maybe it was pixels or padding
+   or not putting .services-content before .services-bottom-content
+   But even changing those still pushes the image underneath the text */
+
+  /* .services-content .services-bottom-content {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    margin: 20px 0 35px 0;
+    padding-top: 40px
+  } */
+
+
+  /* Solution */
+
+  /* This is the veresion from the solution code
+  It looks exactly the same to me */
+
+   .services-content .services-bottom-content {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid black; 
+    margin: 20px 0 35px 0;
+    padding-top: 40px; 
+  }
+
+.services-content .services-bottom-content .service-facts {
+  width: 400px;
+  margin: 0 50px 15px 0;
+}
+
+.services-content .services-bottom-content .service-facts p {
+  margin-bottom: 20px;
+}
+
+.services-content .services-bottom-content .services-info-img {
+  width: 400px;
+  height: 300px;
+}
+
+.service-facts ul {
+  margin: 20px;
+}
+
+.services-content .service-facts ul li {
+  list-style: square;
+  padding: 3px;
+ }
+
 
    
